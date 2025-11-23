@@ -1,0 +1,13 @@
+# Use a local file-based H2 database in the project directory (./data/testdb)
+spring.datasource.url=jdbc:h2:file:./data/testdb;DB_CLOSE_ON_EXIT=FALSE;AUTO_SERVER=TRUE
+spring.datasource.username=sa
+spring.datasource.password=
+spring.datasource.driver-class-name=org.h2.Driver
+
+# Create tables on start
+spring.jpa.hibernate.ddl-auto=create
+spring.jpa.show-sql=true
+
+# Expose H2 console
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2-console

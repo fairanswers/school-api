@@ -1,0 +1,42 @@
+package com.example.school.controller;
+
+import com.example.school.model.Course;
+import com.example.school.repository.CourseRepository;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/api/courses")
+public class CourseController {
+    private final CourseRepository repo;
+    public CourseController(CourseRepository repo) { this.repo = repo; }
+
+    @GetMapping
+    public List<Course> all() { return repo.findAll(); }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Course> get(@PathVariable Long id) {
+        return repo.findById(id).map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());
+    }
+
+    @PostMapping
+    public Course create(@RequestBody Course c) { return repo.save(c); }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Course> update(@PathVariable Long id, @RequestBody Course c) {
+        return repo.findById(id).map(existing -> {
+            existing.setClassName(c.getClassName());
+            existing.setDepartment(c.getDepartment());
+            return ResponseEntity.ok(repo.save(existing));
+        }).orElse(ResponseEntity.notFound().build());
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> delete(@PathVariable Long id) {
+        if (!repo.existsById(id)) return ResponseEntity.notFound().build();
+        repo.deleteById(id);
+        return ResponseEntity.noContent().build();
+    }
+}

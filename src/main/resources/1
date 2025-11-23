@@ -1,0 +1,60 @@
+2025-11-23 10:25:17,460 [   2821]   WARN - #c.i.i.s.p.i.BundledSharedIndexProvider - Bundled shared index is not found at: /snap/intellij-idea-community/675/jdk-shared-indexes
+2025-11-23 10:25:26,953 [  12314]   WARN - #c.i.s.c.i.StationSocketConnectionLoop - Discovery connection failed with NoSuchFileException (/run/user/1000/jb.station.sock)
+2025-11-23 10:25:28,196 [  13557]   WARN - #c.i.s.c.i.StationSocketConnectionLoop - RecentProjects connection failed with NoSuchFileException (/run/user/1000/jb.station.sock)
+JCEF_V(25:29:750): Found cef_server binary '/snap/intellij-idea-community/675/jbr/lib/cef_server' via System.getProperty('java.home')=/snap/intellij-idea-community/675/jbr
+JCEF_V(25:29:751): Java is started via native launcher. Found cef_server path /snap/intellij-idea-community/675/jbr/lib/cef_server (via system propety)
+SLF4J(E): A service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.jul.JULServiceProvider not a subtype
+[GitHub Copilot Agent Persistence] INFO jetbrains.exodus.io.FileDataWriter - Uninterruptible file channel will be used
+[GitHub Copilot Agent Persistence] INFO jetbrains.exodus.env.EnvironmentImpl - Exodus environment created: /home/jfair/.config/github-copilot/ic/chat-agent-sessions/35t9uVaA6WsmgmUzeFXIFkODe27
+[DefaultDispatcher-worker-29] INFO jetbrains.exodus.env.EnvironmentImpl - Exodus environment created: /home/jfair/.config/github-copilot/ic/chat-edit-sessions/35t9uVaA6WsmgmUzeFXIFkODe27
+[DefaultDispatcher-worker-13] INFO jetbrains.exodus.env.EnvironmentImpl - Exodus environment created: /home/jfair/.config/github-copilot/ic/chat-sessions/35t9uVaA6WsmgmUzeFXIFkODe27
+[AWT-EventQueue-0] INFO nitrite - Nitrite database has been closed successfully.
+[AWT-EventQueue-0] INFO nitrite - Nitrite database has been closed successfully.
+[AWT-EventQueue-0] INFO nitrite - Nitrite database has been closed successfully.
+2025-11-23 10:25:37,354 [  22715]   WARN - #com.github.copilot.platform.utils.PlatformApplicationExtensions - Exception occurred during invokeAndWait execution
+java.lang.Throwable: Control-flow exceptions (e.g. this class com.intellij.openapi.progress.CeProcessCanceledException) should never be logged. Instead, these should have been rethrown if caught.
+	at com.intellij.openapi.diagnostic.Logger.ensureNotControlFlow(Logger.java:504)
+	at com.intellij.idea.IdeaLogger.warn(IdeaLogger.java:139)
+	at com.github.copilot.platform.utils.observability.GitHubLogger.warn(GitHubLogger.kt:29)
+	at com.github.copilot.platform.utils.ApplicationKt.runOnEdtAndWait(Application.kt:116)
+	at com.github.copilot.platform.utils.ProjectKt.getCurrentEditor(Project.kt:62)
+	at com.github.copilot.platform.utils.ProjectKt.getCurrentFile(Project.kt:64)
+	at com.github.copilot.platform.utils.FileServiceKt$FileService$1.getCurrentFile(FileService.kt:10)
+	at com.github.copilot.template.PromptTemplateListItemComponent.isFileExcluded(PromptTemplateListItemComponent.kt:40)
+	at com.github.copilot.template.PromptTemplateListItemComponent.<init>(PromptTemplateListItemComponent.kt:17)
+	at com.github.copilot.template.PromptTemplateListItemComponentKt.toComponent(PromptTemplateListItemComponent.kt:46)
+	at com.github.copilot.template.PromptTemplatePopupController.<init>(PromptTemplatePopupController.kt:48)
+	at com.github.copilot.template.PromptTemplatePopupController.<init>(PromptTemplatePopupController.kt:34)
+	at com.github.copilot.agent.input.CopilotAgentInputTextArea.<init>(CopilotAgentInputTextArea.kt:56)
+	at com.github.copilot.agent.input.CopilotAgentInputTextArea.<init>(CopilotAgentInputTextArea.kt:34)
+	at com.github.copilot.agent.input.CopilotAgentInputPanelBase.<init>(CopilotAgentInputPanelBase.kt:102)
+	at com.github.copilot.agent.input.CopilotAgentInputPanel.<init>(CopilotAgentInputPanel.kt:17)
+	at com.github.copilot.agent.session.component.CopilotAgentSessionComponent.<init>(CopilotAgentSessionComponent.kt:59)
+	at com.github.copilot.agent.session.CopilotAgentSessionController.<init>(CopilotAgentSessionController.kt:160)
+	at com.github.copilot.agent.session.CopilotAgentSessionController.<init>(CopilotAgentSessionController.kt:106)
+	at com.github.copilot.agent.session.CopilotAgentSessionManager.createSessionControllerInstance(CopilotAgentSessionManager.kt:110)
+	at com.github.copilot.agent.session.CopilotAgentSessionManager.createSessionControllerInstance(CopilotAgentSessionManager.kt:56)
+	at com.github.copilot.agent.session.AbstractSessionManager.createSessionController(AbstractSessionManager.kt:93)
+	at com.github.copilot.agent.session.AbstractSessionManager.getOrCreateSessionController(AbstractSessionManager.kt:84)
+	at com.github.copilot.agent.session.AbstractSessionManager.getOrCreateSessionController(AbstractSessionManager.kt:80)
+	at com.github.copilot.agent.session.AbstractSessionManager.access$getOrCreateSessionController(AbstractSessionManager.kt:22)
+	at com.github.copilot.agent.session.AbstractSessionManager$getOrCreateSessionController$1.invokeSuspend(AbstractSessionManager.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:613)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:1189)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:778)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:765)
+Caused by: com.intellij.openapi.progress.CeProcessCanceledException: kotlinx.coroutines.JobCancellationException: Job was cancelled; job="ProjectImpl@672271682 container":supervisor:ChildScope{Cancelling}@4690cfbf
+	at com.intellij.openapi.progress.Cancellation.ensureActive(Cancellation.java:61)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.doCheckCanceled(CoreProgressManager.java:165)
+	at com.intellij.openapi.progress.ProgressManager.checkCanceled(ProgressManager.java:336)
+	at com.intellij.openapi.application.impl.LaterInvocator.invokeAndWait(LaterInvocator.java:124)
+	at com.intellij.openapi.application.impl.ApplicationImpl.doInvokeAndWait(ApplicationImpl.java:564)
+	at com.intellij.openapi.application.impl.ApplicationImpl.invokeAndWait(ApplicationImpl.java:539)
+	at com.intellij.openapi.application.impl.ApplicationImpl.invokeAndWait(ApplicationImpl.java:599)
+	at com.github.copilot.platform.utils.ApplicationKt.runOnEdtAndWait(Application.kt:111)
+	... 28 more
+Caused by: kotlinx.coroutines.JobCancellationException: Job was cancelled; job="ProjectImpl@672271682 container":supervisor:ChildScope{Cancelling}@4690cfbf
+2025-11-23 10:25:37,360 [  22721]   WARN - #com.github.copilot.platform.utils.PlatformApplicationExtensions - Suppressed a frequent exception logged for the 2nd time: kotlinx.coroutines.JobCancellationException: Job was cancelled; job="ProjectImpl@672271682 container":supervisor:ChildScope{Cancelling}@4690cfbf

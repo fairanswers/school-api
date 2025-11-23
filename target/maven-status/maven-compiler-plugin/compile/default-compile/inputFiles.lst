@@ -1,0 +1,11 @@
+/tmp/db/src/main/java/com/example/school/repository/TeacherRepository.java
+/tmp/db/src/main/java/com/example/school/model/Teacher.java
+/tmp/db/src/main/java/com/example/school/repository/StudentRepository.java
+/tmp/db/src/main/java/com/example/school/controller/TeacherController.java
+/tmp/db/src/main/java/com/example/school/model/Student.java
+/tmp/db/src/main/java/com/example/school/DataLoader.java
+/tmp/db/src/main/java/com/example/school/SchoolApiApplication.java
+/tmp/db/src/main/java/com/example/school/controller/StudentController.java
+/tmp/db/src/main/java/com/example/school/controller/CourseController.java
+/tmp/db/src/main/java/com/example/school/repository/CourseRepository.java
+/tmp/db/src/main/java/com/example/school/model/Course.java
