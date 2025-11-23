@@ -1,5 +1,6 @@
 package com.example.school.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
@@ -37,6 +38,7 @@ public class Course {
     public String getDepartment() { return department; }
     public void setDepartment(String department) { this.department = department; }
 
+    @JsonIgnore
     public Set<Student> getStudents() { return students; }
     public void setStudents(Set<Student> students) { this.students = students; }
 }
